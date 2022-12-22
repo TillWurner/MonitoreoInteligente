@@ -3,27 +3,27 @@
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
    <head>
       <meta charset="utf-8">
-      <title>Sidebar | JGM</title>
-      <link rel="stylesheet" href={{ asset("log-in/login.css") }}>
+      <title>Monitoreo Inteligente</title>
+      <link rel="stylesheet" href={{ asset("sidebar/sidebar.css") }}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
    <body>
         <div class="btn">
-            <span class="fas fa-bars"></span>
+            <span style="background: #1b1b1b; height: 45px; width: 45px;" class="fas fa-bars"></span>
         </div>
           <nav class="sidebar">
-            <div class="text">Sidebar Menu</div>
+            <div class="text">-- Menu --</div>
             <ul>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Home</a></li>
              <li>
-                    <a href="#" class="feat-btn">Features
+                    <a href="#" class="feat-btn">Parqueos
                         <span class="fas fa-caret-down first"></span>
                     </a>
                 <ul class="feat-show">
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Elements</a></li>
+                    <li><a href="#" style="font-size: 17px">Agregar parqueo</a></li>
+                    <li><a href="#" style="font-size: 17px">Ver mis parqueos</a></li>
                 </ul>
              </li>
              <li>
@@ -38,7 +38,7 @@
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Overview</a></li>
             <li><a href="#">Shortcuts</a></li>
-            <li><a href="#">FeedBack</a></li>
+            <li><a href="#">Salirse</a></li>
              </ul>
         </nav>
         <script>

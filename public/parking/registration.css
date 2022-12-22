@@ -1,0 +1,228 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-image: url('/all/img/F3.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.regform{
+    width: 650px;
+    background-color: rgb(0, 0, 0, 0.6); /*Bajarlo a 0*/
+    margin-left: 330px;
+    margin-top: 30px;
+    color: #ffffff;
+    /* padding: 10px 0px 10px 0px; */
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+.main{
+    background-color: rgba(246, 201, 153, 0.841);
+    width: 650px;
+    height: 600px;
+    margin-left: 330px;
+}
+form{
+    padding: 10px;
+}
+#name{
+    width: 100%;
+    height: 100px;
+}
+.name{
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 125px;
+    /* color: white; */
+    font-size: 18px;
+    font-weight: 700;
+}
+.firstname{
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 40px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.lastname{
+    position: relative;
+    width: 230px;
+    left: 300px;
+    top: -82px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;   
+}
+.firstlabel{
+    position: relative;
+    /* color: #E5E5E5; */
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 135px;
+    top: -45px;
+}
+.lastlabel{
+    position: relative;
+    /* color: #E5E5E5; */
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 70px;
+    top: -45px;
+}
+.company{
+    position: relative;
+    left: 130px;
+    top: -40px;
+    line-height: 40px;
+    width: 450px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.date{
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 40px;
+    width: 480px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.code{
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 40px;
+    width: 95px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.number{
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 40px;
+    width: 255px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.area-code{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 16px;
+    left: 100px;
+    top: -4px; 
+}
+.phone-number{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: -120px;
+    top: -2px; 
+}
+.option{
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 40px;
+    width: 450px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    outline: none;
+    overflow: hidden;    
+}
+.option option{
+    font-size: 15px;
+}
+#coustomer{
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+}
+#student{
+    font-size: 20px;
+}
+.radio{
+    display: inline-block;
+    padding-right: 70px;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.radio input{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+button{
+    background-color: #3baf9f;
+    display: block;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #366473;
+    padding: 15px 100px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25px;
+}
+button:hover{
+    background-color: #5390f5;
+}
+/*Camara*/
+.Title{
+    width: 448px;
+    background-color: rgb(0, 0, 0, 0.6); /*Bajarlo a 0*/
+    margin-left: 1051px;
+    margin-top: -550px;
+    color: #ffffff;
+    /* padding: 10px 0px 10px 0px; */
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+/* .camera{
+    background-color: rgba(246, 201, 153, 0.841);
+    width: 450px;
+    height: 300px;
+    margin-left: 1050px;
+} */
+.back-video {
+    position: absolute;
+    right: 36px;
+    bottom: 250px;
+    height: 300px;
+    width: 448px;
+    position: center;
+    size: cover; 
+    overflow: hidden;
+    display: inline-block;
+    z-index: -1;
+}

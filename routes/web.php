@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ContactusController;
+use App\Http\Controllers\ParkingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/contactus', [ContactusController::class, 'contactus'])->name('contactus');
+Route::get('/parking/registration',[ParkingController::class,'registration'])->name('parking.registration');
