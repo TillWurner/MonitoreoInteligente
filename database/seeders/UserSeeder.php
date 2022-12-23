@@ -21,6 +21,9 @@ class UserSeeder extends Seeder
                 'name'=>'Admin',
                 'email'=>'admin@gmail.com',
                 'password'=>Hash::make('1234'),
+                'admin'=>1,
+                'client'=>0
+
             ]
         ]);
     }
