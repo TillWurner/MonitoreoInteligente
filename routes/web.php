@@ -18,10 +18,11 @@ use App\Http\Controllers\ParkingController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('main');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/* Route::get('/welcome', [App\Http\Controllers\HomeController::class, 'main'])->name('base'); */
 Route::get('/contactus', [ContactusController::class, 'contactus'])->name('contactus');
 Route::get('/parking/registration',[ParkingController::class,'registration'])->name('parking.registration');
