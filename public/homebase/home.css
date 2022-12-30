@@ -36,8 +36,37 @@ body{
     font-size: 40px;
     font-weight: 700;
     overflow: hidden;
+    /* border-right: .15em solid orange; */
+    white-space: nowrap;
+    animation: typing 2s steps(20, end) forwards, blinking .75s infinite;
+    /* animation-delay: 2s; */
+  }
+  .aws2{
+    font-size: 40px;
+    font-weight: 700;
+    /* overflow: hidden; */
+    /* border-right: .15em solid orange; */
+    white-space: nowrap;
+    animation: typing 2s steps(20, end) forwards, blinking .75s infinite;
+    animation-delay: 2s;
+  }
+  .aws3{
+    font-size: 40px;
+    font-weight: 700;
+    overflow: hidden;
+    /* border-right: .15em solid orange; */
+    white-space: nowrap;
+    animation: typing 2s steps(20, end) forwards, blinking .75s infinite;
+    animation-delay: 4s;
+  }
+  .aws4{
+    font-size: 40px;
+    font-weight: 700;
+    overflow: hidden;
     border-right: .15em solid orange;
-    white-space: typing 1.5s steps(20, end) forwards, blinking .75s infinite;
+    white-space: nowrap;
+    animation: typing 2s steps(20, end) forwards, blinking .75s infinite;
+    animation-delay: 6s;
   }
   @keyframes typing{
     from {width: 0;}

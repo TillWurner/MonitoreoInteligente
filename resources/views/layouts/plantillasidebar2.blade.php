@@ -16,7 +16,7 @@
           <nav class="sidebar">
             <div class="text">-- Menu --</div>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href={{route('home')}}>Home</a></li>
              <li>
                     <a href="#" class="feat-btn">Parqueos
                         <span class="fas fa-caret-down first"></span>

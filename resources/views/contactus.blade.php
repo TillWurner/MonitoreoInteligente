@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="card" style="bottom: 90px">
+            <div class="card" style="bottom: 35px">
                 <div class="face face1">
                     <div class="content">
                         <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" style="bottom: 90px">
+            <div class="card" style="bottom: 35px">
                 <div class="face face1">
                     <div class="content">
                         <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
