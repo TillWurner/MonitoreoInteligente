@@ -32,3 +32,18 @@ body{
     font-size: 40px;
     font-weight: 700;
   }
+  .aws{
+    font-size: 40px;
+    font-weight: 700;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: typing 1.5s steps(20, end) forwards, blinking .75s infinite;
+  }
+  @keyframes typing{
+    from {width: 0;}
+    to {width: 100%;}
+  }
+  @keyframes blinking{
+    from {border-color: transparent;}
+    to {border-color: orange;}
+  }

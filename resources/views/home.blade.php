@@ -9,7 +9,9 @@
                     Hola {{ Auth::user()->name }} !
                  </div> --}}
                  <p>
-                    ¡ Bienvenido !
+                  <div class="text" style="display: inline-block">
+                     <h1 class="aws">¡ Bienvenido !</h1>
+                  </div>
                  </p>
                  <p style="font-size: 30px">
                     Gracias por escogernos para administrar 
