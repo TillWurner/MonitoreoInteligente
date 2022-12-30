@@ -25,7 +25,7 @@
                 <li><a href={{route('main')}}>Home</a></li>
                 <li><a href={{route('login')}}>Log In</a></li>
                 <li><a href={{route('register')}}>Register</a></li>
-                <li><a href={{route('parking.registration')}}>Contact Us</a></li>
+                <li><a href={{route('contactus')}}>Contact Us</a></li>
             </ul>
         </nav>
         <div class="content">

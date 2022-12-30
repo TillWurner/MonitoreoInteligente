@@ -34,7 +34,7 @@
 }
 .sidebar{
     position:fixed;
-    /* margin-top: -30px; */ /*N*/
+    margin-top: -30px; /*N*/
     width: 250px;
     height: 100%;
     left: -250px;

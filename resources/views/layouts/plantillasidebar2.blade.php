@@ -4,7 +4,7 @@
    <head>
       <meta charset="utf-8">
       <title>Monitoreo Inteligente</title>
-      <link rel="stylesheet" href={{ asset("sidebar/sidebar.css") }}>
+      <link rel="stylesheet" href={{ asset("sidebar/sidebar2.css") }}>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -38,7 +38,7 @@
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Overview</a></li>
             <li><a href="#">Shortcuts</a></li>
-            <li><a href={{route('parking.registration')}}>Registro de vehiculo</a></li>  <!--Mover dicho boton-->
+            <li><a href={{route('parking.registration')}}>Registro de vehiculo</a></li>
             {{-- <li><a href="{{ route('logout') }}">Salirse</a></li> --}}
             <li><a href="{{ route('logout') }}"  onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

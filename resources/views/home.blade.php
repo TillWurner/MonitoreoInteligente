@@ -1,23 +1,24 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@extends('layouts.plantillasidebar')
+@section('content2')
+    <link rel="stylesheet" href={{ asset('homebase/home.css') }}>
+    <link rel="stylesheet" href={{asset("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")}} integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <body>
+        <div class="content">
+            <!-- <img src="/logincss/img/banner5.jpg" >-->
+                 {{-- <div class="header">
+                    Hola {{ Auth::user()->name }} !
+                 </div> --}}
+                 <p>
+                    ¡ Bienvenido !
+                 </p>
+                 <p style="font-size: 30px">
+                    Gracias por escogernos para administrar 
+                    <br>
+                    tus parqueos! 
+                 </p>
+                 <p style="font-size: 30px">
+                    Prueba todas las opciones que tenemos para usted.
+                 </p>
+          </div>
+    </body>
 @endsection
