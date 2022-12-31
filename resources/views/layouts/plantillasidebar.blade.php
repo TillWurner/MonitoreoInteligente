@@ -28,6 +28,15 @@
                 <li>
                     <a href={{ route('user.index') }}>Ver Clientes</a>
                 </li>
+                <li><a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+                        Cerrar Sesion
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
             @endif
 
             @if (Auth::user()->cliente == 1)

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+/* use RealRashid\SweetAlert\Facades\Alert;
+ */
 class UserController extends Controller
 {
     /**
@@ -55,7 +57,7 @@ class UserController extends Controller
             'cliente'=>request('cliente'),
 
         ]);
-
+        /* Alert::success('Usuario creado correctamente'); */
         return redirect()->route('home');
     }
 
