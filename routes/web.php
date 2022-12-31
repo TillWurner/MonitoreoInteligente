@@ -31,4 +31,4 @@ Route::get('/parking/registration',[ParqueoController::class,'registration'])->n
 
 Route::get('user/create', [UserController::class, 'create'])->name('user.create');
 Route::post('user/store', [UserController::class, 'store'])->name('user.store');
-Route::get('user/index', [UserController::class, 'index'])->name('user.index');
+Route::get('/userlist', [UserController::class, 'index'])->name('user.index');
