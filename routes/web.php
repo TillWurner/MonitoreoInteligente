@@ -29,6 +29,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/contactus', [ContactusController::class, 'contactus'])->name('contactus');
 Route::get('/parking/registration',[ParqueoController::class,'registration'])->name('parking.registration');
 
-
-Route::resource('user', UserController::class)->middleware(['auth']);
+Route::get('user/create', [UserController::class, 'create'])->name('user.create');
+Route::post('user/store', [UserController::class, 'store'])->name('user.store');
 Route::get('user/index', [UserController::class, 'index'])->name('user.index');

@@ -8,7 +8,7 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-.btn{
+.btnside{
     position: absolute;
     top: 15px;
     left: 45px;
@@ -20,16 +20,16 @@
     cursor: pointer;
     transition: left 0.4s ease;
 }
-.btn.click{
+.btnside.click{
     left: 260px;
 }
-.btn span{
+.btnside span{
     color: white;
     font-size: 28px;
     line-height: 45px;
 
 }
-.btn.click span:before{
+.btnside.click span:before{
     content: '\f00d';
 }
 .sidebar{

@@ -1,4 +1,4 @@
-@extends('layouts.plantillasidebar2')
+@extends('layouts.plantillasidebar')
 @section('content2')
     <link rel="stylesheet" href={{ asset('parking/registration.css') }}>
     <link rel="stylesheet" href={{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css') }}
@@ -13,31 +13,38 @@
             </ul>
         </div>
     @endif
+    <div class="container justify-content-center text-center pt-3 mt-2" style="background: rgba(255, 255, 255, 0.471); width:400px; border-radius: 5px;text-align: center;border:2px solid black">
+        <div class="container">
+            <form class="container" method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
+                @csrf
+                <label for=name>Nombre completo: </label>
+                <input name="name" type="text">
+                <br>
+                <label for="email">Correo Electronico: </label>
+                <input name="email" type="email">
+                <br>
 
-    <div class="container">
-        <form class="container" method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
-            @csrf
-            <label for=name>Nombre completo: </label>
-            <input name="name" type="text">
+                <label for="password">Contraseña: </label>
+                <br>
 
-            <label for="email">Correo Electronico: </label>
-            <input name="email" type="email">
+                <input type="password" name="password">
+                <br>
 
-            <label for="password">Contraseña: </label>
-            <input type="password" name="password">
+                <label for=telefono>Telefono: </label>
+                <input name="telefono" type="text">
+                <br>
 
-            <label for=telefono>Telefono: </label>
-            <input name="telefono" type="text">
+                <input type="hidden" name="admin" value=0>
 
-            <input type="hidden" name="admin" value=0>
+                <input type="hidden" name="cliente" value=1>
 
-            <input type="hidden" name="cliente" value=1>
-
-            <div align="center">
-                <button type="submit" class="btn btn-info ">
-                    {{ __('Guardar') }}
-                </button>
-            </div>
-        </form>
+                <div align="center">
+                    <button type="submit" class="btn btn-primary">
+                        {{ __('Guardar') }}
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
+
 @endsection

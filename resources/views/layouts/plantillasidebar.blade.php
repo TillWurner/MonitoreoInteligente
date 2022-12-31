@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="btn">
+    <div class="btnside">
         <span style="background: #1b1b1b; height: 45px; width: 45px;" class="fas fa-bars"></span>
     </div>
     <nav class="sidebar">
@@ -24,6 +24,9 @@
                 </li>
                 <li>
                     <a href={{ route('user.create') }}>Nuevo Usuario</a>
+                </li>
+                <li>
+                    <a href={{ route('user.index') }}>Ver Clientes</a>
                 </li>
             @endif
 
@@ -77,15 +80,15 @@
 
     </nav>
     <script>
-        $('.btn').click(function() {
+        $('.btnside').click(function() {
             $(this).toggleClass("click");
             $('.sidebar').toggleClass("show");
         });
-        $('.feat-btn').click(function() {
+        $('.feat-btnside').click(function() {
             $('nav ul .feat-show').toggleClass("show");
             $('nav ul .first').toggleClass("rotate");
         });
-        $('.serv-btn').click(function() {
+        $('.serv-btnside').click(function() {
             $('nav ul .serv-show').toggleClass("show1");
             $('nav ul .second').toggleClass("rotate");
         });
