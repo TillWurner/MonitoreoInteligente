@@ -17,11 +17,21 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = 'users';
+
     protected $fillable = [
         'name',
         'email',
         'password',
+        'telefono',
+        'admin',
+        'cliente'
     ];
+
+    public function parqueo(){
+        return $this->hasMany(Parqueo::class,'id_user');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
