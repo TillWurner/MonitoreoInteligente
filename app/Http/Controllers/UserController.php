@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -13,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('user.index', compact('users'));
     }
 
     /**
@@ -23,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -34,7 +37,26 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'name' => ['required'],
+            'telefono' => ['required'],
+            'email' => ['required'],
+            'password' => ['required'],
+            'admin' => ['required'],
+            'cliente' => ['required'],
+
+        ]);
+       $user= User::create([
+            'name'=>request('name'),
+            'telefono'=>request('telefono'),
+            'email'=>request('email'),
+            'password'=> bcrypt(request('password')),
+            'admin'=>request('admin'),
+            'cliente'=>request('cliente'),
+
+        ]);
+
+        return redirect()->route('user.index');
     }
 
     /**
