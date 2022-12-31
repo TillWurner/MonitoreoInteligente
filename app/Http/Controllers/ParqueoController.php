@@ -16,6 +16,11 @@ class ParqueoController extends Controller
         //
     }
 
+    public function registration()
+    {
+        return view('parking.registration');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
