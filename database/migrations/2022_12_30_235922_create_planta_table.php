@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('planta', function (Blueprint $table) {
             $table->id();
+            $table->int('espacios')->nullable();
+            $table->int('numero')->nullable();
+            $table->unsignedBigInteger("id_parqueo")->nullable();
+            $table->foreign('id_parqueo')->on('parqueo')->references('id')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

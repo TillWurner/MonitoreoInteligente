@@ -13,17 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('parqueo', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('telefono')->nullable();
-            $table->boolean('admin');
-            $table->boolean('cliente');
-            $table->rememberToken();
             $table->timestamps();
+            $table->string('nombre')->nullable();
+            $table->string('ubicacion')->nullable();
+            $table->unsignedBigInteger("id_user")->nullable();
+            $table->foreign('id_user')->on('users')->references('id')->onDelete('cascade');
+
         });
     }
 
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('parqueo');
     }
 };

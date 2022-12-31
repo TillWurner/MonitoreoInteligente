@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('parkeo', function (Blueprint $table) {
+        Schema::create('camara', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("id_planta")->nullable();
+            $table->foreign('id_planta')->on('planta')->references('id')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parkeo');
+        Schema::dropIfExists('camara');
     }
 };
