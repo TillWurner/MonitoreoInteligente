@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Parqueo;
 use App\Models\User;
 use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 use Illuminate\Http\Request;
@@ -58,7 +59,13 @@ class UserController extends Controller
 
         ]);
         /* Alert::success('Usuario creado correctamente'); */
-        return redirect()->route('home');
+        return redirect()->route('parqueo.create', $user->id);
+    }
+
+    public function informacion($id){
+        $users = User::where('id',$id)->get();
+        $parqueo = Parqueo::all();
+        return view('user.informacion',compact('users','parqueo'));
     }
 
     /**

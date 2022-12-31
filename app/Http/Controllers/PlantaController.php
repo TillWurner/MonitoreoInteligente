@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Parqueo;
 use Illuminate\Http\Request;
 
 class PlantaController extends Controller
@@ -21,9 +22,10 @@ class PlantaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $parqueo = Parqueo::findOrFail($id);
+        return view('parqueo.create', compact('parqueo'));
     }
 
     /**
@@ -34,7 +36,20 @@ class PlantaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'espacios' => ['required'],
+            'numero' => ['required'],
+            'id_parqueo' => ['required'],
+
+
+        ]);
+       $planta= Parqueo::create([
+            'espacios'=>request('espacios'),
+            'numero'=>request('numero'),
+            'id_parqueo'=>request('id_parqueo'),
+        ]);
+        /* Alert::success('Planta creada correctamente'); */
+        return redirect()->route('home');
     }
 
     /**
