@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    {{-- livewire --}}
+    @livewireStyles
+
+
 </head>
 
 <body>
@@ -79,6 +84,12 @@
         </ul>
 
     </nav>
+        @yield('content2')
+
+
+
+    {{-- Scripts --}}
+    @livewireScripts
     <script>
         $('.btnside').click(function() {
             $(this).toggleClass("click");
@@ -96,7 +107,16 @@
             $(this).addClass("active").siblings().removeClass("active");
         });
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
-@yield('content2')
+
 
 </html>
