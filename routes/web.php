@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\ParkingController;
 use App\Http\Controllers\ParqueoController;
+use App\Http\Controllers\PlantaController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -32,3 +33,11 @@ Route::get('/parking/registration',[ParqueoController::class,'registration'])->n
 Route::get('user/create', [UserController::class, 'create'])->name('user.create');
 Route::post('user/store', [UserController::class, 'store'])->name('user.store');
 Route::get('/userlist', [UserController::class, 'index'])->name('user.index');
+Route::get('user/informacion/{id}', [UserController::class, 'informacion'])->name('user.informacion');
+
+
+Route::get('parqueo/create/{id}', [ParqueoController::class, 'create'])->name('parqueo.create');
+Route::post('parqueo/store', [ParqueoController::class, 'store'])->name('parqueo.store');
+
+Route::get('planta/create/{id}', [PlantaController::class, 'create'])->name('planta.create');
+Route::post('planta/store', [PlantaController::class, 'store'])->name('planta.store');

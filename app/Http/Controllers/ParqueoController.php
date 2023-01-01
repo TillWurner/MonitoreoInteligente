@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Parqueo;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ParqueoController extends Controller
@@ -26,9 +28,10 @@ class ParqueoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('parqueo.create', compact('user'));
     }
 
     /**
@@ -39,7 +42,20 @@ class ParqueoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $credentials =   Request()->validate([ //validar los datos
+            'nombre' => ['required'],
+            'ubicacion' => ['required'],
+            'id_user' => ['required'],
+
+
+        ]);
+       $parqueo= Parqueo::create([
+            'nombre'=>request('nombre'),
+            'ubicacion'=>request('ubicacion'),
+            'id_user'=>request('id_user'),
+        ]);
+        /* Alert::success('Parqueo creado correctamente'); */
+        return redirect()->route('planta.create', $parqueo->id);
     }
 
     /**

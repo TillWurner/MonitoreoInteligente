@@ -13,6 +13,9 @@
             </ul>
         </div>
     @endif
+    <div align="center">
+        <h3>Nuevo Usuario</h3>
+    </div>
     <div class="container justify-content-center text-center pt-3 mt-2" style="background: rgba(255, 255, 255, 0.471); width:400px; border-radius: 5px;text-align: center;border:2px solid black">
         <div class="container">
             <form class="container" method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
@@ -21,6 +24,7 @@
                 <input name="name" type="text">
                 <br>
                 <label for="email">Correo Electronico: </label>
+                <br>
                 <input name="email" type="email">
                 <br>
 
@@ -31,6 +35,7 @@
                 <br>
 
                 <label for=telefono>Telefono: </label>
+                <br>
                 <input name="telefono" type="text">
                 <br>
 
