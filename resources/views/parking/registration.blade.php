@@ -1,15 +1,20 @@
-@extends('layouts.plantillasidebar2')
+@extends('layouts.plantillasidebar')
 @section('content2')  <!--Section of Register -->
     <link rel="stylesheet" href={{ asset('parking/registration.css') }}>
     <link rel="stylesheet" href={{asset("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")}} integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <body >
+    <body>
     </body>
     <!--Formulario Registro-->
-    <div id="registro">
-        <div class="regform">
+    <div class="pet" style="font-size: 0">
+        <a href="#">No Borrar</a>
+        <br>
+        <a href="#">No Borrar</a>
+    </div>
+    <div id="registro" >
+        <div class="regform" style="margin-top: 40px">
             <h1> Registro de Vehiculo </h1>
         </div> 
-        <div class="main">
+        <div class="main" style="margin-top: 0px">
             <form>
                 <div id="name">
                     <h2 class="name">Conductor</h2>

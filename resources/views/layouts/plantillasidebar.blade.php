@@ -53,23 +53,21 @@
                 </li>
 
                 <li>
-                    <a href="#" class="feat-btn">Plantas
+                    <a href="#" class="feat-btnside">Plantas
                         <span class="fas fa-caret-down first"></span>
                     </a>
-                    <ul class="feat-show">
-                        <li><a href="#" style="font-size: 17px">Agregar parqueo</a></li>
-                        <li><a href="#" style="font-size: 17px">Ver mis parqueos</a></li>
+                    <ul class="feat-show" style="margin-left: -30px">
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;" >Agregar parqueo</a></li>
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;">Ver parqueos</a></li>
                     </ul>
                 </li>
-
-
                 <li>
-                    <a href="#" class="serv-btn">Services
+                    <a href="#" class="serv-btnside" >Services
                         <span class="fas fa-caret-down second"></span>
                     </a>
-                    <ul class="serv-show">
-                        <li><a href="#">App Design</a></li>
-                        <li><a href="#">Web Design</a></li>
+                    <ul class="serv-show" style="margin-left: -30px">
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;">App Design</a></li>
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;">Web Design</a></li>
                     </ul>
                 </li>
 
@@ -93,8 +91,6 @@
         </ul>
 
     </nav>
-
-        @yield('content2')
 
     {{-- Scripts --}}
     <script>
@@ -126,6 +122,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
-
-
+@yield('content2')
 </html>
