@@ -106,8 +106,6 @@ class ParqueoController extends Controller
     public function indexparqueouser($id){
         $parqueo=Parqueo::where('id_user',$id)->get();
         return view('parqueo.userindex', compact('parqueo'));
-
-
     }
 
 
