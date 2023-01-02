@@ -7,6 +7,7 @@ use App\Http\Controllers\ParkingController;
 use App\Http\Controllers\ParqueoController;
 use App\Http\Controllers\PlantaController;
 use App\Http\Controllers\UserController;
+use App\Models\Parqueo;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Route::get('user/create', [UserController::class, 'create'])->name('user.create'
 Route::post('user/store', [UserController::class, 'store'])->name('user.store');
 Route::get('/userlist', [UserController::class, 'index'])->name('user.index');
 Route::get('user/informacion/{id}', [UserController::class, 'informacion'])->name('user.informacion');
+
+Route::get('parqueo/index/{id}', [ParqueoController::class, 'indexparqueouser'])->name('parqueo.userindex');
+
 
 
 Route::get('parqueo/create/{id}', [ParqueoController::class, 'create'])->name('parqueo.create');

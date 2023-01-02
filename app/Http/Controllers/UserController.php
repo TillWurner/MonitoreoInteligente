@@ -65,8 +65,18 @@ class UserController extends Controller
     public function informacion($id){
         $users = User::where('id',$id)->get();
         $parqueo = Parqueo::all();
+
         return view('user.informacion',compact('users','parqueo'));
     }
+
+
+    public function administrar($id){
+        $users = User::where('id',$id)->get();
+        $parqueo = Parqueo::all();
+
+        return view('user.administrar',compact('users','parqueo'));
+    }
+
 
     /**
      * Display the specified resource.

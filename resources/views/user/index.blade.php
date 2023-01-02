@@ -40,8 +40,11 @@
                             <td>{{ $user->name == null ? '--' : $user->name }}</td>
                             <td>{{ $user->telefono == null ? '--' : $user->telefono }}</td>
                             <td>{{ $user->email == null ? '--' : $user->email }}</td>
-                            <td>
+                           {{--  <td>
                                 <a href="{{route('user.informacion',$user->id)}}" class="btn btn-info btn-sm ">Ver informacion</a>
+                            </td> --}}
+                            <td>
+                                <a href="{{route('parqueo.userindex',$user->id)}}" class="btn btn-info btn-sm ">Ver Parqueos</a>
                             </td>
                         </tr>
                         @endif

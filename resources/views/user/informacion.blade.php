@@ -47,6 +47,7 @@
                             <td>{{ $user->name == null ? '--' : $user->name }}</td>
                             <td>{{ $user->telefono == null ? '--' : $user->telefono }}</td>
                             <td>{{ $user->email == null ? '--' : $user->email }}</td>
+                            <td>{{$user->parqueo->nombre ?? '--'}}</td>
                             <td>{{ $user->parqueo->nombre == null ? '--' : $user->parqueo->nombre }}</td>
                             <td>{{ $user->parqueo->ubicacion == null ? '--' : $user->parqueo->ubicacion }}</td>
                             <td>{{ $user->parqueo->planta->numero == null ? '--' : $user->parqueo->planta->numero }}</td>
