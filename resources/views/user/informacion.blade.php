@@ -32,7 +32,6 @@
                     <th>Dueño</th>
                     <th>Telefono</th>
                     <th>Email</th>
-
                     <th>Nombre del parqueo</th>
                     <th>Ubicacion del parqueo</th>
                     <th>Cantidad de plantas</th>
@@ -41,20 +40,16 @@
                     <th>Opciones</th>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
-                        @if ($user->cliente == 1)
+                    @foreach ($plantas as $planta)
                         <tr>
-                            <td>{{ $user->name == null ? '--' : $user->name }}</td>
-                            <td>{{ $user->telefono == null ? '--' : $user->telefono }}</td>
-                            <td>{{ $user->email == null ? '--' : $user->email }}</td>
-                            <td>{{$user->parqueo->nombre ?? '--'}}</td>
-                            <td>{{ $user->parqueo->nombre == null ? '--' : $user->parqueo->nombre }}</td>
-                            <td>{{ $user->parqueo->ubicacion == null ? '--' : $user->parqueo->ubicacion }}</td>
-                            <td>{{ $user->parqueo->planta->numero == null ? '--' : $user->parqueo->planta->numero }}</td>
-                            <td>{{ $user->parqueo->planta->cantidad_espacios == null ? '--' : $user->parqueo->planta->cantidad_espacios }}
-                            </td>
+                            <td>{{ $planta->parqueo->user->name == null ? '--' : $planta->parqueo->user->name }}</td>
+                            <td>{{ $planta->parqueo->user->telefono == null ? '--' : $planta->parqueo->user->telefono }}</td>
+                            <td>{{ $planta->parqueo->user->email == null ? '--' : $planta->parqueo->user->email }}</td>
+                            <td>{{ $planta->parqueo->nombre == null ? '--' : $planta->parqueo->nombre }}</td>
+
+
+                        </td>
                         </tr>
-                        @endif
                     @endforeach
                 </tbody>
             </table>

@@ -21,7 +21,7 @@
                         <td>{{ $item->planta->numero == null ? '--' : $item->planta->numero }}</td>
 
                         <td>
-                            <a href="{{route('parqueo.index',$user->id)}}" class="btn btn-info btn-sm ">Plantas</a>
+                            <a href="{{route('planta.index',$item->id)}}" class="btn btn-info btn-sm ">Plantas</a>
                         </td>
                     </tr>
                 @endforeach

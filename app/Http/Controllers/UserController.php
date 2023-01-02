@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Parqueo;
+use App\Models\Planta;
 use App\Models\User;
 use Illuminate\Console\View\Components\Alert as ComponentsAlert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 /* use RealRashid\SweetAlert\Facades\Alert;
  */
 class UserController extends Controller
@@ -59,14 +62,26 @@ class UserController extends Controller
 
         ]);
         /* Alert::success('Usuario creado correctamente'); */
-        return redirect()->route('parqueo.create', $user->id);
+        return redirect()->route('user.index');
+    }
+
+
+    public function totalplantas($idparque){
+        $numero = DB::select('select count(id)* from planta where $idparque=id_parqueo');
+        return $numero;
     }
 
     public function informacion($id){
-        $users = User::where('id',$id)->get();
-        $parqueo = Parqueo::all();
 
-        return view('user.informacion',compact('users','parqueo'));
+        $users = User::where('id',$id)->get()->first();
+
+        $parqueos = Parqueo::where('id_user', $users->id)->get()->first();
+        /* $numero = DB::select('select count(id)* from planta where ,$parqueos->id,=id_parqueo');
+        return $numero; */
+
+       $plantas = Planta::where('id_parqueo', $parqueos->id)->get();
+
+        return view('user.informacion',compact('users','parqueos','plantas'));
     }
 
 

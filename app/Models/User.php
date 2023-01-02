@@ -29,9 +29,7 @@ class User extends Authenticatable
         'cliente'
     ];
 
-    public function parqueo(){
-        return $this->hasMany(Parqueo::class,'id_user');
-    }
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -51,4 +49,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    use HasFactory;
+
+    public function parqueo(){
+        return $this->hasMany(Parqueo::class,'id_user');
+    }
 }

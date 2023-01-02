@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Parqueo;
+use App\Models\Planta;
 use Illuminate\Http\Request;
 
 class PlantaController extends Controller
@@ -14,7 +15,12 @@ class PlantaController extends Controller
      */
     public function index()
     {
-        //
+
+    }
+
+    public function indexplanta($id){
+        $plantas=Planta::where('id_parqueo',$id)->get();
+        return view('planta.index', compact('plantas'));
     }
 
     /**
@@ -25,7 +31,7 @@ class PlantaController extends Controller
     public function create($id)
     {
         $parqueo = Parqueo::findOrFail($id);
-        return view('parqueo.create', compact('parqueo'));
+        return view('planta.create', compact('parqueo'));
     }
 
     /**
@@ -37,19 +43,29 @@ class PlantaController extends Controller
     public function store(Request $request)
     {
         $credentials =   Request()->validate([ //validar los datos
-            'espacios' => ['required'],
+            'cantidad_espacios' => ['required'],
             'numero' => ['required'],
             'id_parqueo' => ['required'],
 
 
         ]);
-       $planta= Parqueo::create([
-            'espacios'=>request('espacios'),
-            'numero'=>request('numero'),
-            'id_parqueo'=>request('id_parqueo'),
-        ]);
-        /* Alert::success('Planta creada correctamente'); */
-        return redirect()->route('home');
+        $input = $request->all();
+        $contador = 1;
+         for($i = 0; $i < count($input['cantidad_espacios']); $i++){
+
+            $parqueo = Parqueo::where('id',$request->id_parqueo[$i])->first();
+            /* $parqueo->cantidad_espacios = $parqueo->cantidad_planta + $request->cantidad[$i]; */
+
+            $planta = new Planta;
+            $planta->cantidad_espacios = $request->cantidad_espacios[$i];
+            $planta->id_parqueo = $request->id_parqueo[$i];
+            $planta->numero = $request->numero[$i];
+
+            $planta->save();
+            /* $parqueo->save(); */
+        }
+
+        return redirect()->route('user.index');
     }
 
     /**
