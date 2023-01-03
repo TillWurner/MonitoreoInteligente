@@ -53,28 +53,22 @@
                 </li>
 
                 <li>
-                    <a href="#" class="feat-btnside">Plantas
+                    <a href="#" class="feat-btnside">Parqueos
                         <span class="fas fa-caret-down first"></span>
                     </a>
                     <ul class="feat-show" style="margin-left: -30px">
-                        <li><a href="#" style="font-size: 15.4px; height: 50px;" >Agregar parqueo</a></li>
-                        <li><a href="#" style="font-size: 15.4px; height: 50px;">Ver parqueos</a></li>
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;" >Ver parqueos</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="serv-btnside" >Services
+                    <a href="#" class="serv-btnside" >Vigilancia
                         <span class="fas fa-caret-down second"></span>
                     </a>
                     <ul class="serv-show" style="margin-left: -30px">
-                        <li><a href="#" style="font-size: 15.4px; height: 50px;">App Design</a></li>
-                        <li><a href="#" style="font-size: 15.4px; height: 50px;">Web Design</a></li>
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;">Planta 1</a></li>
+                        <li><a href="#" style="font-size: 15.4px; height: 50px;">Planta 2</a></li>
                     </ul>
                 </li>
-
-
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Shortcuts</a></li>
                 <li><a href={{ route('parking.registration') }}>Registro de vehiculo</a></li>
                 <!--Mover dicho boton-->
                 {{-- <li><a href="{{ route('logout') }}">Salirse</a></li> --}}
