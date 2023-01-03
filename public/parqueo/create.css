@@ -1,0 +1,87 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-image: url('/all/img/F3.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title{
+    width: 550px;
+    background-color: rgb(0, 0, 0, 0.6); /*Bajarlo a 0*/
+    margin-left: 430px;
+    margin-top: 90px;
+    color: #ffffff;
+    /* padding: 10px 0px 10px 0px; */
+    right: 30px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    text-align: center;
+   /*  border-radius: 15px 15px 0px 0px solid black; */
+    border:1px solid black;
+    border-radius: 15px 15px 0px 0px;
+}
+.main{
+    background-color: rgba(246, 201, 153, 0.841);
+    width: 550px;
+    height: 300px;
+    margin-left: 430px;
+    border:2px solid black;
+    border-radius: 5px;
+}
+form{
+    padding: 10px;
+}
+.name{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.name_input{
+    position: relative;
+    left: 220px;
+    top: -37px;
+    line-height: 40px;
+    width: 250px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.ubicacion{
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+.ubicacion_input{
+    position: relative;
+    left: 220px;
+    top: -35px;
+    line-height: 40px;
+    width: 250px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+.guardar{
+    background-color: #1e4db3;
+    display: block;
+    margin-top: -10px;
+    margin-left: 120px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #366473;
+    padding: 15px 100px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25px;
+}

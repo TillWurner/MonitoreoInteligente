@@ -1,6 +1,6 @@
 @extends('layouts.plantillasidebar')
 @section('content2')
-    <link rel="stylesheet" href={{ asset('parking/registration.css') }}>
+    <link rel="stylesheet" href={{ asset('planta/index.css') }}>
     <link rel="stylesheet" href={{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css') }}
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -21,8 +21,8 @@
     @endif
     <div class="table">
         <br>
-        <div class="container justify-content-center text-center pt-3 mt-2" style="background: rgba(255, 255, 255, 0.471); width:300px; border-radius: 5px;text-align: center;border:2px solid black">
-            <h1  style="color: rgb(254, 10, 10); font-weight: 4;font-family: Times New Roman">Plantas</h1>
+        <div class="box_title" style="margin-left: 500px ; margin-top: 60px">
+            <h1 class="title_table">Plantas</h1>
         </div>
 
         <div class="container  mt-2 justify-content-center">
