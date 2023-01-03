@@ -1,6 +1,6 @@
 @extends('layouts.plantillasidebar')
 @section('content2')
-    <link rel="stylesheet" href={{ asset('parking/registration.css') }}>
+    <link rel="stylesheet" href={{ asset('user/create.css') }}>
     <link rel="stylesheet" href={{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css') }}
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -13,41 +13,42 @@
             </ul>
         </div>
     @endif
-    <div align="center">
+    <div class="pet" style="font-size: 0">
+        <a href="#">No Borrar</a>
+        <br>
+        <a href="#">No Borrar</a>
+    </div>
+    <div class="title">
         <h3>Nuevo Usuario</h3>
     </div>
-    <div class="container justify-content-center text-center pt-3 mt-2" style="background: rgba(255, 255, 255, 0.471); width:400px; border-radius: 5px;text-align: center;border:2px solid black">
+    <div class="main">
         <div class="container">
-            <form class="container" method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
                 @csrf
-                <label for=name>Nombre completo: </label>
-                <input name="name" type="text">
-                <br>
-                <label for="email">Correo Electronico: </label>
-                <br>
-                <input name="email" type="email">
-                <br>
-
-                <label for="password">Contraseña: </label>
-                <br>
-
-                <input type="password" name="password">
-                <br>
-
-                <label for=telefono>Telefono: </label>
-                <br>
-                <input name="telefono" type="text">
-                <br>
-
-                <input type="hidden" name="admin" value=0>
-
-                <input type="hidden" name="cliente" value=1>
-
-                <div align="center">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Guardar') }}
-                    </button>
-                </div>
+                    {{-- <label for=name>Nombre completo: </label> --}}
+                    <h2 class="name">Nombre completo: </h2>
+                    <input class="name_input" name="name" type="text">
+                    <br>
+                    {{-- <label for="email">Correo Electronico: </label> --}}
+                    <h2 class="email">Correo Electronico: </h2>
+                    <br>
+                    <input class="email_input" name="email" type="email">
+                    <br>
+                    <h2 class="password">Contraseña: </h2>
+                    <br>
+                    <input class="password_input" type="password" name="password">
+                    <br>
+                    <h2 class="telefono">Telefono: </h2>
+                    <br>
+                    <input class="telefono_input" name="telefono" type="text">
+                    <br>
+                    <input type="hidden" name="admin" value=0>
+                    <input type="hidden" name="cliente" value=1>
+                    <div>
+                        <button type="submit" class="guardar">
+                            {{ __('Guardar') }}
+                        </button>
+                    </div>
             </form>
         </div>
     </div>
